@@ -23,7 +23,7 @@
             android:id="@+id/manChange_bigTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="修改/删除事故信息界面"
+            android:text="修改/删除事故原因界面"
             android:layout_centerInParent="true"
             android:textSize="18sp"
             android:textStyle="bold">

@@ -26,7 +26,6 @@ public class ReasonSecondActivity extends AppCompatActivity {
     RecyclerView recy;
     String airwhy ="";
     SingleBean singleBean;
-    //ReasonAdapter singleAdapter;
     SingleAdapter singleAdapter;
     List<SingleBean.DataBean> list;
     @Override

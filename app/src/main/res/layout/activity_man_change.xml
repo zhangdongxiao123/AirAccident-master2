@@ -184,7 +184,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="巴拉巴拉一大堆">
+                android:text="某时某地因为什么发生航空事故">
             </EditText>
         </LinearLayout>
     </ScrollView>
