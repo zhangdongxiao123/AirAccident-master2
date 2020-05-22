@@ -2,9 +2,14 @@ package com.example.airaccident.Other;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.DatePicker;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.airaccident.Other.History.contentbase.BaseActivity;
 import com.example.airaccident.Other.History.contentbase.ContentURL;
 import com.example.airaccident.Other.History.hisbean.LaoHuangLiBean;
 import com.example.airaccident.R;
@@ -18,9 +23,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TodayActivity extends AppCompatActivity {
+public class TodayActivity extends BaseActivity implements View.OnClickListener {
     TextView today_header,today_number,today_week,today_lunar;
     TextView today_PengZu,today_WuXing,today_ChongSha,today_JiShen,today_XiongShen,today_yi,today_Ji;
+    private ImageButton imgBtn;
     private Calendar calendar;
     private Date date;
 
@@ -40,6 +46,9 @@ public class TodayActivity extends AppCompatActivity {
         today_XiongShen=findViewById(R.id.today_XiongShen);
         today_yi=findViewById(R.id.today_yi);
         today_Ji=findViewById(R.id.today_Ji);
+
+        imgBtn=findViewById(R.id.today_imgbtn);
+        imgBtn.setOnClickListener((View.OnClickListener) this);
 
         //获取日历对象
         calendar= Calendar.getInstance();
@@ -104,6 +113,27 @@ public class TodayActivity extends AppCompatActivity {
         return weeks[index];
     }
 
+    private void popCalendarDialog() {
+        //弹出日期对话框
+        Calendar calendar=Calendar.getInstance();
+        DatePickerDialog dialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                //改变老黄历上显示的内容
+                String time=year+"-"+(month+1)+"-"+dayOfMonth;
+                String laoHuangLiURL=ContentURL.getLaoHuangLiURL(time);
+                loadHeaderData(laoHuangLiURL);
+            }
+        },calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH));
+        dialog.show();
+    }
 
 
+    @Override
+    public void onClick(View v) {
+        if (v.getId()==R.id.today_imgbtn) {
+            popCalendarDialog();
+            return;
+        }
+    }
 }
