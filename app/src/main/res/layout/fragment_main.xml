@@ -61,7 +61,7 @@
             android:layout_height="50dp"
             android:adjustViewBounds="true"
             android:gravity="center"
-            android:text="历史今天"
+            android:text="老黄历"
             android:textColor="#3D7EB1"
             android:textSize="16sp"
             android:background="@drawable/round_btn"

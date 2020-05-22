@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Search.sactivity.ReasonDetailActivity"></activity>
+        <activity android:name=".Other.TodayActivity"></activity>
+        <activity android:name=".Search.sactivity.ReasonDetailActivity" />
         <activity android:name=".Search.sactivity.ChangeReasonActivity" />
         <activity android:name=".Search.sactivity.ReasonAddActivity" />
         <activity android:name=".Search.sactivity.NewsReasonActivity" />

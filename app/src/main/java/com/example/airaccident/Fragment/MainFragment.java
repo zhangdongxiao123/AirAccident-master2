@@ -20,6 +20,7 @@ import com.example.airaccident.Other.Information.InfoFourActivity;
 import com.example.airaccident.Other.Information.InfoOneActivity;
 import com.example.airaccident.Other.Information.InfoThreeActivity;
 import com.example.airaccident.Other.Information.InfoTwoActivity;
+import com.example.airaccident.Other.TodayActivity;
 import com.example.airaccident.R;
 import com.example.airaccident.Other.Weather.WeatherActivity;
 import com.example.airaccident.Other.Writeagain.FocusTextView;
@@ -98,7 +99,7 @@ public class MainFragment extends Fragment {
                     getActivity().startActivity(intent8);
                     break;
                 case R.id.fra_main_btn4:
-                    Intent intent9=new Intent(getActivity(), HistoryActivity.class);
+                    Intent intent9=new Intent(getActivity(), TodayActivity.class);
                     getActivity().startActivity(intent9);
                     break;
             }
