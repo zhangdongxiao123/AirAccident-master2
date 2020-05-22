@@ -6,17 +6,25 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.airaccident.Other.AccInfo.accbase.AccURL;
 import com.example.airaccident.Other.AccInfo.accbase.BaseAccActivity;
 import com.example.airaccident.Other.AccInfo.accbean.AccBean;
+import com.example.airaccident.Other.History.contentbase.BaseActivity;
+import com.example.airaccident.Other.History.hisbean.LaoHuangLiBean;
 import com.example.airaccident.R;
 import com.google.gson.Gson;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.List;
 
 //2.设置点击事件
-public class AccListActivity extends BaseAccActivity implements View.OnClickListener {
+public class AccListActivity extends BaseActivity implements View.OnClickListener {
     ImageView shuaxin,sousuo;
     EditText  shuru;
     ListView liebiao;
@@ -48,19 +56,40 @@ public class AccListActivity extends BaseAccActivity implements View.OnClickList
     }
 
     //9.一旦成功，就会在onSuccess中显示
-    @Override
-    public void onSuccess(String result) {
-        //10.把原来的内容先清空
-        mDatas.clear();
-        //11.加载成功数据，去解析一下,拿到这个类的对象
-        AccBean accBean = new Gson().fromJson(result, AccBean.class);
-        List<AccBean.ResultBean> list=accBean.getResult();
-        //12.向mDatas中加入数据
-        for (int i=0;i<5;i++){
-            mDatas.add(list.get(i));
-        }
-        //13.通知adapter更新
-        adapter.notifyDataSetChanged();
+    private void loadData1(String accURL) {
+        //获取老黄历接口数据
+        RequestParams params=new RequestParams(accURL);
+        x.http().get(params, new CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                //10.把原来的内容先清空
+                mDatas.clear();
+                //11.加载成功数据，去解析一下,拿到这个类的对象
+                AccBean accBean = new Gson().fromJson(result, AccBean.class);
+                List<AccBean.ResultBean> list=accBean.getResult();
+                //12.向mDatas中加入数据
+                for (int i=0;i<5;i++){
+                    mDatas.add(list.get(i));
+                }
+                //13.通知adapter更新
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
     }
 
 

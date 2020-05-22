@@ -23,7 +23,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TodayActivity extends BaseActivity implements View.OnClickListener {
+public class TodayActivity extends AppCompatActivity implements View.OnClickListener {
     TextView today_header,today_number,today_week,today_lunar;
     TextView today_PengZu,today_WuXing,today_ChongSha,today_JiShen,today_XiongShen,today_yi,today_Ji;
     private ImageButton imgBtn;
