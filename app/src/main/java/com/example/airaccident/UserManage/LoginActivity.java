@@ -1,4 +1,4 @@
-package com.example.airaccident.My;
+package com.example.airaccident.UserManage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -161,8 +161,16 @@ public class LoginActivity extends AppCompatActivity {
             btnSubmit.setEnabled(false);
             return;
         }
+        if (msg.length()>10) {
+            btnSubmit.setEnabled(false);
+            return;
+        }
         msg = etPassword.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
+            btnSubmit.setEnabled(false);
+            return;
+        }
+        if (msg.length()>15) {
             btnSubmit.setEnabled(false);
             return;
         }

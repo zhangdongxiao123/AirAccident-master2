@@ -1,6 +1,7 @@
-package com.example.airaccident.My;
+package com.example.airaccident.ManManage;
 
 import androidx.appcompat.app.AppCompatActivity;
+import okhttp3.Call;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -19,36 +20,37 @@ import com.knifestone.hyena.currency.TextWatcherAdapter;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import okhttp3.Call;
+import static com.example.airaccident.app.Url.register;
 
-import static com.example.airaccident.app.Url.userRegister;
-
-public class RegistActivity extends AppCompatActivity {
-    EditText acount,password;
+public class ManRegistActivity extends AppCompatActivity {
+    EditText acount,password,again;
     Button zhuce;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regist);
-        //初始化
-        acount=(EditText)findViewById(R.id.register_account);
-        password=(EditText)findViewById(R.id.register_pwd);
-        zhuce=(Button)findViewById(R.id.register_zhuce);
-        //设置过滤，账号输入框只能输入字母、数字、符号、中文，过滤表情
+        setContentView(R.layout.activity_man_regist);
+        //1.绑定控件
+        acount=(EditText)findViewById(R.id.manRegist_account);
+        password=(EditText)findViewById(R.id.manRegist_password);
+        again=(EditText)findViewById(R.id.manRegist_again);
+        zhuce=(Button)findViewById(R.id.manRegist_zhuce);
+        //2.设置过滤，账号输入框只能输入字母、数字、符号、中文，过滤表情
         InputFilterAdapter inputFilter=new InputFilterAdapter
                 .Builder()
                 .filterEmoji(true)
                 .builder();
         acount.setFilters(new InputFilter[]{inputFilter});
-        //设置过滤，密码输入框只能输入字母、数字、符号，过滤表情和中文
+        //3.设置过滤，密码输入框只能输入字母、数字、符号，过滤表情和中文
         InputFilterAdapter inputFilter1=new InputFilterAdapter
                 .Builder()
                 .filterEmoji(true)
                 .filterChinese(true)
                 .builder();
         password.setFilters(new InputFilter[]{inputFilter1});
-        //设置文本变化监听
+        again.setFilters(new InputFilter[]{inputFilter1});
+        //4.设置文本变化监听
         acount.addTextChangedListener(new TextWatcherAdapter() {
             @Override
             public void afterTextChanged(Editable s) {
@@ -63,22 +65,38 @@ public class RegistActivity extends AppCompatActivity {
 
             }
         });
+        again.addTextChangedListener(new TextWatcherAdapter() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                checkSubmit();
+
+            }
+        });
+        //5.设置点击事件
         initData();
     }
-    //注册逻辑
+    //6.点击事件
     private void initData(){
         zhuce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (!again.getText().toString().equals(password.getText().toString()))
+                {
+                    Toast.makeText(ManRegistActivity.this, "两次密码输入不一致", Toast.LENGTH_SHORT).show();
+
+                    return;
+                }
+
                 OkHttpUtils.post()
-                        .url(userRegister)
-                        .addParams("useracct",acount.getText().toString().trim())
-                        .addParams("userpwd",password.getText().toString().trim())
+                        .url(register)
+                        .addParams("manacct",acount.getText().toString().trim())
+                        .addParams("manpwd",again.getText().toString().trim())
                         .build()
                         .execute(new StringCallback() {
                             @Override
                             public void onError(Call call, Exception e, int id) {
-                                Toast.makeText(RegistActivity.this, "onError", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ManRegistActivity.this, "onError", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
@@ -91,13 +109,13 @@ public class RegistActivity extends AppCompatActivity {
 
                                     if (status.equals("0"))
                                     {
-                                        Toast.makeText(RegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ManRegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                                         finish();
 
                                     }
 
                                     else {
-                                        Toast.makeText(RegistActivity.this, msg+"", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ManRegistActivity.this, msg+"", Toast.LENGTH_SHORT).show();
 
                                     }
 
@@ -110,6 +128,8 @@ public class RegistActivity extends AppCompatActivity {
                             }
                         });
 
+
+
             }
         });
     }
@@ -117,7 +137,7 @@ public class RegistActivity extends AppCompatActivity {
 
 
     /**
-     * 第一次跳转到注册页面，按钮不能够后被点击
+     * 第一次跳转到修改密码页面，按钮不能够后被点击
      */
 
     @Override
@@ -135,11 +155,29 @@ public class RegistActivity extends AppCompatActivity {
             zhuce.setEnabled(false);
             return;
         }
+        if(msg.length()>10){
+            zhuce.setEnabled(false);
+            return;
+        }
         msg = password.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
+            zhuce.setEnabled(false);
+            return;
+        }
+        if(msg.length()>15){
+            zhuce.setEnabled(false);
+            return;
+        }
+        msg = again.getText().toString().trim();
+        if(TextUtils.isEmpty(msg)){
+            zhuce.setEnabled(false);
+            return;
+        }
+        if(msg.length()>15){
             zhuce.setEnabled(false);
             return;
         }
         zhuce.setEnabled(true);
     }
 }
+

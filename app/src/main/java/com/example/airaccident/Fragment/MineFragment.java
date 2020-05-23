@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.airaccident.My.LoginActivity;
+import com.example.airaccident.UserManage.LoginActivity;
 import com.example.airaccident.R;
-import com.example.airaccident.Search.sactivity.ManLoginActivity;
+import com.example.airaccident.ManManage.ManLoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.

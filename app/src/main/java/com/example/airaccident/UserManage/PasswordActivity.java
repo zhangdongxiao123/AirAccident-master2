@@ -1,4 +1,4 @@
-package com.example.airaccident.My;
+package com.example.airaccident.UserManage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +24,7 @@ import okhttp3.Call;
 import static com.example.airaccident.app.Url.userUpdateUserInfo;
 
 public class PasswordActivity extends AppCompatActivity {
-    EditText acount,password;
+    EditText acount,password,again;
     Button gengxin;
 
     @Override
@@ -34,6 +34,7 @@ public class PasswordActivity extends AppCompatActivity {
         //初始化
         acount=(EditText)findViewById(R.id.password_account);
         password=(EditText)findViewById(R.id.password_pwd);
+        again=findViewById(R.id.password_again);
         gengxin=(Button)findViewById(R.id.password_gengxin);
         //设置过滤，账号输入框只能输入字母、数字、符号、中文，过滤表情
         InputFilterAdapter inputFilter=new InputFilterAdapter
@@ -48,6 +49,7 @@ public class PasswordActivity extends AppCompatActivity {
                 .filterChinese(true)
                 .builder();
         password.setFilters(new InputFilter[]{inputFilter1});
+        again.setFilters(new InputFilter[]{inputFilter1});
         //设置文本变化监听
         acount.addTextChangedListener(new TextWatcherAdapter() {
             @Override
@@ -63,6 +65,13 @@ public class PasswordActivity extends AppCompatActivity {
 
             }
         });
+        again.addTextChangedListener(new TextWatcherAdapter() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                checkSubmit();
+
+            }
+        });
         initData();
     }
     //注册逻辑
@@ -70,6 +79,12 @@ public class PasswordActivity extends AppCompatActivity {
      gengxin.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
+             if (!again.getText().toString().equals(password.getText().toString()))
+             {
+                 Toast.makeText(PasswordActivity.this, "两次密码输入不一致", Toast.LENGTH_SHORT).show();
+
+                 return;
+             }
              OkHttpUtils.post()
                      .url(userUpdateUserInfo)
                      .addParams("useracct",acount.getText().toString().trim())
@@ -129,16 +144,37 @@ public class PasswordActivity extends AppCompatActivity {
      * 检测是否可以提交
      */
     private void checkSubmit(){
+
         String msg = acount.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
             gengxin.setEnabled(false);
             return;
         }
+        if(msg.length()>10){
+            gengxin.setEnabled(false);
+            return;
+        }
+
         msg = password.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
             gengxin.setEnabled(false);
             return;
         }
+        if(msg.length()>15){
+            gengxin.setEnabled(false);
+            return;
+        }
+
+        msg = again.getText().toString().trim();
+        if(TextUtils.isEmpty(msg)){
+            gengxin.setEnabled(false);
+            return;
+        }
+        if(msg.length()>15){
+            gengxin.setEnabled(false);
+            return;
+        }
+
         gengxin.setEnabled(true);
     }
 }

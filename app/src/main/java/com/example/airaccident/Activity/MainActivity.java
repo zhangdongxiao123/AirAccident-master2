@@ -37,7 +37,7 @@ public class MainActivity extends FragmentActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //创建一个fragment对象
+        //创建一个FragmentTabHost对象
         FragmentTabHost tabHost=(FragmentTabHost) findViewById(R.id.tabHost);
         //启动
         tabHost.setup(MainActivity.this,getSupportFragmentManager(),android.R.id.tabcontent);
@@ -49,6 +49,7 @@ public class MainActivity extends FragmentActivity{
             TextView tav_tv=inflate.findViewById(R.id.tv);
             tab_iv.setImageResource(imgSelectors[i]);
             tav_tv.setText(tabTitles[i]);
+            //newTabSpec设置每个标签的标识，setIndicator设置每个标签的形式
             tabHost.addTab(tabHost.newTabSpec(""+i).setIndicator("tab1").setIndicator(inflate),fragments[i],null);
         }
 

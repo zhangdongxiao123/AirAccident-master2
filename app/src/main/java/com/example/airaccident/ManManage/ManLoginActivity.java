@@ -1,70 +1,68 @@
-package com.example.airaccident.Search.sactivity;
+package com.example.airaccident.ManManage;
 
 import androidx.appcompat.app.AppCompatActivity;
 import okhttp3.Call;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.airaccident.R;
+import com.example.airaccident.Search.sactivity.ManSelectActivity;
 import com.knifestone.hyena.currency.InputFilterAdapter;
 import com.knifestone.hyena.currency.TextWatcherAdapter;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import static com.example.airaccident.app.Url.updateUserInfo;
+import static com.example.airaccident.app.Url.login;
 
-public class ManPasswordActivity extends AppCompatActivity {
-    EditText acount,password,again;
-    Button xiugai;
+public class ManLoginActivity extends AppCompatActivity {
+    EditText manAcount,manPassword;
+    Button manLogin;
+    TextView mima,zhuce;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_man_password);
+        setContentView(R.layout.activity_man_login);
         //1.绑定控件
-        acount=(EditText)findViewById(R.id.manPassword_account);
-        password=(EditText)findViewById(R.id.manPassword_password);
-        again=(EditText)findViewById(R.id.manPassword_again);
-        xiugai=(Button)findViewById(R.id.manPassword_xiugai);
+        manAcount=(EditText)findViewById(R.id.manAccount);
+        manPassword=(EditText)findViewById(R.id.manPassword);
+        manLogin=(Button)findViewById(R.id.manLogin);
+        mima=(TextView)findViewById(R.id.man_mima);
+        zhuce=(TextView)findViewById(R.id.man_zhuce);
         //2.设置过滤，账号输入框只能输入字母、数字、符号、中文，过滤表情
         InputFilterAdapter inputFilter=new InputFilterAdapter
                 .Builder()
                 .filterEmoji(true)
                 .builder();
-        acount.setFilters(new InputFilter[]{inputFilter});
+        manAcount.setFilters(new InputFilter[]{inputFilter});
         //3.设置过滤，密码输入框只能输入字母、数字、符号，过滤表情和中文
         InputFilterAdapter inputFilter1=new InputFilterAdapter
                 .Builder()
                 .filterEmoji(true)
                 .filterChinese(true)
                 .builder();
-        password.setFilters(new InputFilter[]{inputFilter1});
-        again.setFilters(new InputFilter[]{inputFilter1});
+        manPassword.setFilters(new InputFilter[]{inputFilter1});
         //4.设置文本变化监听
-        acount.addTextChangedListener(new TextWatcherAdapter() {
+        manAcount.addTextChangedListener(new TextWatcherAdapter() {
             @Override
             public void afterTextChanged(Editable s) {
                 checkSubmit();
 
             }
         });
-        password.addTextChangedListener(new TextWatcherAdapter() {
-            @Override
-            public void afterTextChanged(Editable s) {
-                checkSubmit();
-
-            }
-        });
-        again.addTextChangedListener(new TextWatcherAdapter() {
+        manPassword.addTextChangedListener(new TextWatcherAdapter() {
             @Override
             public void afterTextChanged(Editable s) {
                 checkSubmit();
@@ -74,52 +72,42 @@ public class ManPasswordActivity extends AppCompatActivity {
         //5.设置点击事件
         initData();
     }
-    //6.点击事件
+    //点击事件
     private void initData(){
-        xiugai.setOnClickListener(new View.OnClickListener() {
+        //监听登录
+        manLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /**
-                 *
-                 * 修改数据库中管理员密码的代码写在这里
+                 * 登录逻辑写在这
                  */
 
-                if (!again.getText().toString().equals(password.getText().toString()))
-                {
-                    Toast.makeText(ManPasswordActivity.this, "两次密码输入不一致", Toast.LENGTH_SHORT).show();
-
-                    return;
-                }
-
                 OkHttpUtils.post()
-                        .url(updateUserInfo)
-                        .addParams("manacct",acount.getText().toString().trim())
-                        .addParams("manpwd",again.getText().toString().trim())
+                        .url(login)
+                        .addParams("manacct",manAcount.getText().toString().trim())
+                        .addParams("manpwd",manPassword.getText().toString().trim())
                         .build()
                         .execute(new StringCallback() {
                             @Override
                             public void onError(Call call, Exception e, int id) {
-
+                                Toast.makeText(ManLoginActivity.this, "onError", Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
                             public void onResponse(String response, int id) {
                                 try {
-
                                     JSONObject jsonObject = JSON.parseObject(response);
                                     String status = jsonObject.getString("status");
                                     String msg = jsonObject.getString("msg");
-
                                     if (status.equals("0"))
                                     {
-                                        Toast.makeText(ManPasswordActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ManLoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                                        Intent intent=new Intent(ManLoginActivity.this, ManSelectActivity.class);
+                                        startActivity(intent);
                                         finish();
-
                                     }
-
                                     else {
-                                        Toast.makeText(ManPasswordActivity.this, msg+"", Toast.LENGTH_SHORT).show();
-
+                                        Toast.makeText(ManLoginActivity.this, msg+"", Toast.LENGTH_SHORT).show();
                                     }
 
 
@@ -132,12 +120,28 @@ public class ManPasswordActivity extends AppCompatActivity {
                         });
             }
         });
+        //监听忘记密码
+        mima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1=new Intent(ManLoginActivity.this, ManPasswordActivity.class);
+                startActivity(intent1);
+            }
+        });
+        //监听注册
+        zhuce.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2=new Intent(ManLoginActivity.this, ManRegistActivity.class);
+                startActivity(intent2);
+            }
+        });
     }
 
 
 
     /**
-     * 第一次跳转到修改密码页面，按钮不能够后被点击
+     * 第一次跳转到管理员登录页面，按钮不能够后被点击
      */
 
     @Override
@@ -150,21 +154,36 @@ public class ManPasswordActivity extends AppCompatActivity {
      * 检测是否可以提交
      */
     private void checkSubmit(){
-        String msg = acount.getText().toString().trim();
+        String msg = manAcount.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
-            xiugai.setEnabled(false);
+            manLogin.setEnabled(false);
             return;
         }
-        msg = password.getText().toString().trim();
-        if(TextUtils.isEmpty(msg)){
-            xiugai.setEnabled(false);
+        if (msg.length()>10) {
+            manLogin.setEnabled(false);
             return;
         }
-        msg = again.getText().toString().trim();
+        msg = manPassword.getText().toString().trim();
         if(TextUtils.isEmpty(msg)){
-            xiugai.setEnabled(false);
+            manLogin.setEnabled(false);
             return;
         }
-        xiugai.setEnabled(true);
+        if (msg.length()>15) {
+            manLogin.setEnabled(false);
+            return;
+        }
+        manLogin.setEnabled(true);
+    }
+
+    //重写返回按钮
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            Intent intent=new Intent();
+            ManLoginActivity.this.setResult(2,intent);
+            finish();
+            return super.onKeyDown(keyCode, event);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

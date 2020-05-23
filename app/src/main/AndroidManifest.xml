@@ -29,9 +29,9 @@
         </activity>
         <activity android:name=".Search.sactivity.ManAddActivity" />
         <activity android:name=".Search.sactivity.ManSelectActivity" />
-        <activity android:name=".Search.sactivity.ManRegistActivity" />
-        <activity android:name=".Search.sactivity.ManPasswordActivity" />
-        <activity android:name=".Search.sactivity.ManLoginActivity" />
+        <activity android:name=".ManManage.ManRegistActivity" />
+        <activity android:name=".ManManage.ManPasswordActivity" />
+        <activity android:name=".ManManage.ManLoginActivity" />
         <activity android:name=".Search.sactivity.ReasonActivity" />
         <activity android:name=".Search.sactivity.TypeActivity" />
         <activity android:name=".Search.sactivity.MessageActivity" />
@@ -43,13 +43,13 @@
         <activity android:name=".Other.Weather.city_manager.SearchCityActivity" />
         <activity android:name=".Other.Weather.city_manager.CityManagerActivity" />
         <activity android:name=".Other.Weather.WeatherActivity" />
-        <activity android:name=".My.PasswordActivity" />
-        <activity android:name=".My.RegistActivity" />
+        <activity android:name=".UserManage.PasswordActivity" />
+        <activity android:name=".UserManage.RegistActivity" />
         <activity android:name=".Other.PicInfo.AirDescActivity" />
         <activity android:name=".Other.PicInfo.AirGrid.AirGridActivity" />
         <activity android:name=".Other.PicInfo.AirList.InfoListActivity" />
         <activity android:name=".Other.Information.InfoFiveActivity" />
-        <activity android:name=".My.LoginActivity" />
+        <activity android:name=".UserManage.LoginActivity" />
         <activity android:name=".Other.Information.InfoFourActivity" />
         <activity android:name=".Other.Information.InfoThreeActivity" />
         <activity android:name=".Other.Information.InfoTwoActivity" />
