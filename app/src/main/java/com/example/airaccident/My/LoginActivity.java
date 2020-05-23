@@ -16,10 +16,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.example.airaccident.My.Db.UserDao;
 import com.example.airaccident.R;
-import com.example.airaccident.Search.sactivity.ManLoginActivity;
-import com.example.airaccident.Search.sactivity.ManSelectActivity;
 import com.knifestone.hyena.currency.InputFilterAdapter;
 import com.knifestone.hyena.currency.TextWatcherAdapter;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -33,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText etAcount,etPassword;
     Button btnSubmit;
     TextView wangjimima,zhuce;
-    UserDao mDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,23 +77,6 @@ public class LoginActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //获取数据
-//                String username=etAcount.getText().toString().trim();
-//                String userpwd=etPassword.getText().toString().trim();
-//                mDao=new UserDao(getApplicationContext());
-//                if(mDao.find(username,userpwd)){
-//                    Intent intent=new Intent();
-//                    Bundle bundle=new Bundle();
-//                    bundle.putString("name", username);
-//                    bundle.putString("pwd", userpwd);
-//                    intent.putExtras(bundle);
-//                    // 1是返回的requestCode
-//                    LoginActivity.this.setResult(1,intent);
-//                    //这里要直接干掉
-//                    finish();
-//                }else {
-//                    Toast.makeText(getApplicationContext(),"账号或密码错误",Toast.LENGTH_SHORT).show();
-//                }
                 String username=etAcount.getText().toString().trim();
                 String userpwd=etPassword.getText().toString().trim();
                 OkHttpUtils.post()

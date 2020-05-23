@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.airaccident.Other.History.HistoryActivity;
 import com.example.airaccident.Other.PicInfo.AirGrid.AirGridActivity;
 import com.example.airaccident.Other.PicInfo.AirList.InfoListActivity;
 import com.example.airaccident.Other.Information.InfoFiveActivity;
@@ -20,7 +19,7 @@ import com.example.airaccident.Other.Information.InfoFourActivity;
 import com.example.airaccident.Other.Information.InfoOneActivity;
 import com.example.airaccident.Other.Information.InfoThreeActivity;
 import com.example.airaccident.Other.Information.InfoTwoActivity;
-import com.example.airaccident.Other.TodayActivity;
+import com.example.airaccident.Other.LaoHuangLi.TodayActivity;
 import com.example.airaccident.R;
 import com.example.airaccident.Other.Weather.WeatherActivity;
 import com.example.airaccident.Other.Writeagain.FocusTextView;

@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Other.TodayActivity"></activity>
+        <activity android:name=".Other.LaoHuangLi.TodayActivity"/>
         <activity android:name=".Search.sactivity.ReasonDetailActivity" />
         <activity android:name=".Search.sactivity.ChangeReasonActivity" />
         <activity android:name=".Search.sactivity.ReasonAddActivity" />
@@ -32,19 +32,13 @@
         <activity android:name=".Search.sactivity.ManRegistActivity" />
         <activity android:name=".Search.sactivity.ManPasswordActivity" />
         <activity android:name=".Search.sactivity.ManLoginActivity" />
-        <activity android:name=".Search.sactivity.ReasonListActivity" />
-        <activity android:name=".Search.sactivity.TypeListActivity" />
         <activity android:name=".Search.sactivity.ReasonActivity" />
         <activity android:name=".Search.sactivity.TypeActivity" />
         <activity android:name=".Search.sactivity.MessageActivity" />
         <activity android:name=".Search.sactivity.DuoListActivity" />
         <activity android:name=".Search.sactivity.MultipleActivity" />
         <activity android:name=".Search.sactivity.SingleActivity" />
-        <activity android:name=".Other.AccInfo.AccListActivity" />
         <activity android:name=".Other.Weather.WmoreActivity" />
-        <activity android:name=".Other.History.HistoryDescActivity" />
-        <activity android:name=".Other.History.HistoryDesActivity" />
-        <activity android:name=".Other.History.HistoryActivity" />
         <activity android:name=".Other.Weather.city_manager.DeleteCityActivity" />
         <activity android:name=".Other.Weather.city_manager.SearchCityActivity" />
         <activity android:name=".Other.Weather.city_manager.CityManagerActivity" />
@@ -54,7 +48,6 @@
         <activity android:name=".Other.PicInfo.AirDescActivity" />
         <activity android:name=".Other.PicInfo.AirGrid.AirGridActivity" />
         <activity android:name=".Other.PicInfo.AirList.InfoListActivity" />
-        <activity android:name=".Activity.DetailSearchActivity" />
         <activity android:name=".Other.Information.InfoFiveActivity" />
         <activity android:name=".My.LoginActivity" />
         <activity android:name=".Other.Information.InfoFourActivity" />

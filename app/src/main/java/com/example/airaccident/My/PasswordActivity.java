@@ -13,9 +13,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.example.airaccident.My.Db.UserDao;
 import com.example.airaccident.R;
-import com.example.airaccident.Search.sactivity.ManPasswordActivity;
 import com.knifestone.hyena.currency.InputFilterAdapter;
 import com.knifestone.hyena.currency.TextWatcherAdapter;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -28,7 +26,6 @@ import static com.example.airaccident.app.Url.userUpdateUserInfo;
 public class PasswordActivity extends AppCompatActivity {
     EditText acount,password;
     Button gengxin;
-    UserDao mDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,15 +70,6 @@ public class PasswordActivity extends AppCompatActivity {
      gengxin.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-//             //获取数据
-//             String username=acount.getText().toString().trim();
-//             String userpwd=password.getText().toString().trim();
-//             //创建表
-//             mDao=new UserDao(getApplicationContext());
-//             //更新
-//             mDao.update(username,userpwd);
-//             //提示
-//             Toast.makeText(getApplicationContext(),"更新成功",Toast.LENGTH_SHORT).show();
              OkHttpUtils.post()
                      .url(userUpdateUserInfo)
                      .addParams("useracct",acount.getText().toString().trim())

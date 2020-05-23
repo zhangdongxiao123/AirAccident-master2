@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.History.hisbean;
+package com.example.airaccident.Other.LaoHuangLi;
 
 public class LaoHuangLiBean {
 
