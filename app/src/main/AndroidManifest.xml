@@ -12,13 +12,13 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".Other.LaoHuangLi.TodayActivity"/>
-        <activity android:name=".Search.sactivity.ReasonDetailActivity" />
-        <activity android:name=".Search.sactivity.ChangeReasonActivity" />
-        <activity android:name=".Search.sactivity.ReasonAddActivity" />
-        <activity android:name=".Search.sactivity.NewsReasonActivity" />
-        <activity android:name=".Search.sactivity.ReasonSecondActivity" />
-        <activity android:name=".Search.sactivity.ManChangeActivity" />
-        <activity android:name=".Search.sactivity.ManChooseActivity">
+        <activity android:name=".Activity.ReaManage.ReasonChangeActivity" />
+        <activity android:name=".Activity.ReaManage.ReasonChooseActivity" />
+        <activity android:name=".Activity.ReaManage.ReasonAddActivity" />
+        <activity android:name=".Activity.AccSearch.ReasonActivity" />
+        <activity android:name=".Activity.AccSearch.ReasonSecondActivity" />
+        <activity android:name=".Activity.AccManage.ManChangeActivity" />
+        <activity android:name=".Activity.AccManage.ManChooseActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -27,42 +27,41 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".Search.sactivity.ManAddActivity" />
-        <activity android:name=".Search.sactivity.ManSelectActivity" />
-        <activity android:name=".ManManage.ManRegistActivity" />
-        <activity android:name=".ManManage.ManPasswordActivity" />
-        <activity android:name=".ManManage.ManLoginActivity" />
-        <activity android:name=".Search.sactivity.ReasonActivity" />
-        <activity android:name=".Search.sactivity.TypeActivity" />
-        <activity android:name=".Search.sactivity.MessageActivity" />
-        <activity android:name=".Search.sactivity.DuoListActivity" />
-        <activity android:name=".Search.sactivity.MultipleActivity" />
-        <activity android:name=".Search.sactivity.SingleActivity" />
+        <activity android:name=".Activity.AccManage.ManAddActivity" />
+        <activity android:name=".Activity.ManManage.ManSelectActivity" />
+        <activity android:name=".Activity.ManManage.ManRegistActivity" />
+        <activity android:name=".Activity.ManManage.ManPasswordActivity" />
+        <activity android:name=".Activity.ManManage.ManLoginActivity" />
+        <activity android:name=".Activity.AccSearch.TypeActivity" />
+        <activity android:name=".Activity.AccSearch.MessageActivity" />
+        <activity android:name=".Activity.AccSearch.MultipleSecondActivity" />
+        <activity android:name=".Activity.AccSearch.MultipleActivity" />
+        <activity android:name=".Activity.AccSearch.SingleActivity" />
         <activity android:name=".Other.Weather.WmoreActivity" />
         <activity android:name=".Other.Weather.city_manager.DeleteCityActivity" />
         <activity android:name=".Other.Weather.city_manager.SearchCityActivity" />
         <activity android:name=".Other.Weather.city_manager.CityManagerActivity" />
         <activity android:name=".Other.Weather.WeatherActivity" />
-        <activity android:name=".UserManage.PasswordActivity" />
-        <activity android:name=".UserManage.RegistActivity" />
+        <activity android:name=".Activity.UserManage.UserPasswordActivity" />
+        <activity android:name=".Activity.UserManage.UserRegistActivity" />
         <activity android:name=".Other.PicInfo.AirDescActivity" />
         <activity android:name=".Other.PicInfo.AirGrid.AirGridActivity" />
         <activity android:name=".Other.PicInfo.AirList.InfoListActivity" />
         <activity android:name=".Other.Information.InfoFiveActivity" />
-        <activity android:name=".UserManage.LoginActivity" />
+        <activity android:name=".Activity.UserManage.UserLoginActivity" />
         <activity android:name=".Other.Information.InfoFourActivity" />
         <activity android:name=".Other.Information.InfoThreeActivity" />
         <activity android:name=".Other.Information.InfoTwoActivity" />
         <activity android:name=".Other.Information.InfoOneActivity" />
-        <activity android:name=".Activity.SplashActivity">
+        <activity android:name=".Activity.FirstActivity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.GuideActivity" />
-        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.FirstActivity.GuideActivity" />
+        <activity android:name=".Activity.FirstActivity.MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

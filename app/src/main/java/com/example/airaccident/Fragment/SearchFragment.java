@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.airaccident.R;
-import com.example.airaccident.Search.sactivity.MultipleActivity;
-import com.example.airaccident.Search.sactivity.NewsReasonActivity;
-import com.example.airaccident.Search.sactivity.SingleActivity;
-import com.example.airaccident.Search.sactivity.TypeActivity;
+import com.example.airaccident.Activity.AccSearch.MultipleActivity;
+import com.example.airaccident.Activity.AccSearch.ReasonActivity;
+import com.example.airaccident.Activity.AccSearch.SingleActivity;
+import com.example.airaccident.Activity.AccSearch.TypeActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,7 +59,7 @@ public class SearchFragment extends Fragment {
                     getActivity().startActivity(intent3);
                     break;
                 case R.id.shijianyuanyin:
-                    Intent intent4=new Intent(getActivity(), NewsReasonActivity.class);
+                    Intent intent4=new Intent(getActivity(), ReasonActivity.class);
                     getActivity().startActivity(intent4);
                     break;
             }

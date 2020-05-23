@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.airaccident.UserManage.LoginActivity;
+import com.example.airaccident.Activity.UserManage.UserLoginActivity;
 import com.example.airaccident.R;
-import com.example.airaccident.ManManage.ManLoginActivity;
+import com.example.airaccident.Activity.ManManage.ManLoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,7 +60,7 @@ public class MineFragment extends Fragment {
                     mine_text.setText("您好，请登录");
                     mine_button.setText("登录");
                 }else {
-                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 1);
+                    startActivityForResult(new Intent(getActivity(), UserLoginActivity.class), 1);
                 }
             }
         });

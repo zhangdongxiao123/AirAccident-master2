@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.airaccident.R;
-import com.example.airaccident.Search.sactivity.ManChangeActivity;
+import com.example.airaccident.Activity.AccManage.ManChangeActivity;
 import com.example.airaccident.bean.SingleBean;
 
 import java.util.List;

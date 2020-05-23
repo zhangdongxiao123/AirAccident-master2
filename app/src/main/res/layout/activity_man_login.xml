@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".ManManage.ManLoginActivity">
+    tools:context=".Activity.ManManage.ManLoginActivity">
     <ImageView
         android:id="@+id/manlogin_img"
         android:layout_width="120dp"
