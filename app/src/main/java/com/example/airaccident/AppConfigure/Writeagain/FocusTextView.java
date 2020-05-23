@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.Writeagain;
+package com.example.airaccident.AppConfigure.Writeagain;
 
 import android.content.Context;
 import android.util.AttributeSet;

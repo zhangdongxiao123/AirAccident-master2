@@ -193,7 +193,7 @@
         android:textColor="#000000"
         android:textSize="20sp">
     </TextView>
-    <com.example.airaccident.Other.Writeagain.FocusTextView
+    <com.example.airaccident.AppConfigure.Writeagain.FocusTextView
         android:id="@+id/focus_tv"
         android:textSize="20sp"
         android:layout_marginTop="10dp"
@@ -217,5 +217,5 @@
 对情况进行了讨论，机长决定单飞行员操作继续飞往比隆，因为只有 15 分钟就
 到下降顶点位置了。副驾驶坐回她的座位上，靠背尽可能向后倾斜，剩余航段作
 为观察员。飞机最终在比隆安全着陆。" >
-    </com.example.airaccident.Other.Writeagain.FocusTextView>
+    </com.example.airaccident.AppConfigure.Writeagain.FocusTextView>
 </LinearLayout>

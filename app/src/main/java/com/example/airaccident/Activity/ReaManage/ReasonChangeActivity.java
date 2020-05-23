@@ -20,9 +20,9 @@ import com.example.airaccident.bean.ReasonDetailBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import static com.example.airaccident.AppConfigure.Url.detail;
-import static com.example.airaccident.AppConfigure.Url.detaildelete;
-import static com.example.airaccident.AppConfigure.Url.detailupdate;
+import static com.example.airaccident.AppConfigure.network.Url.detail;
+import static com.example.airaccident.AppConfigure.network.Url.detaildelete;
+import static com.example.airaccident.AppConfigure.network.Url.detailupdate;
 
 public class ReasonChangeActivity extends AppCompatActivity {
     EditText manadd_airname,manadd_airhow;

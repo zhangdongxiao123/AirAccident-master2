@@ -30,8 +30,8 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.util.EnumSet;
 import java.util.LinkedHashMap;
 
-import static com.example.airaccident.AppConfigure.Url.airdetailadd;
-import static com.example.airaccident.AppConfigure.Url.upload;
+import static com.example.airaccident.AppConfigure.network.Url.airdetailadd;
+import static com.example.airaccident.AppConfigure.network.Url.upload;
 import static com.zhihu.matisse.MimeType.JPEG;
 import static com.zhihu.matisse.MimeType.PNG;
 

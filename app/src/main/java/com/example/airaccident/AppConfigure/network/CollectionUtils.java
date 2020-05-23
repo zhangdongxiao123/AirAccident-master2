@@ -1,4 +1,4 @@
-package com.example.airaccident.AppConfigure;
+package com.example.airaccident.AppConfigure.network;
 
 import android.text.TextUtils;
 

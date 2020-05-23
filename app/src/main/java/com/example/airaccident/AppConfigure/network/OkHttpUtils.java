@@ -5,8 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 
 
-import com.example.airaccident.AppConfigure.CollectionUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.FileNameMap;

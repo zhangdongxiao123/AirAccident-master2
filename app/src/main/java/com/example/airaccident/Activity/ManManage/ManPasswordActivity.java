@@ -20,7 +20,7 @@ import com.knifestone.hyena.currency.TextWatcherAdapter;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import static com.example.airaccident.AppConfigure.Url.updateUserInfo;
+import static com.example.airaccident.AppConfigure.network.Url.updateUserInfo;
 
 public class ManPasswordActivity extends AppCompatActivity {
     EditText acount,password,again;

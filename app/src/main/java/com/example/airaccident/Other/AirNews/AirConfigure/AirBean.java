@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo.Bean;
+package com.example.airaccident.Other.AirNews.AirConfigure;
 
 import java.io.Serializable;
 

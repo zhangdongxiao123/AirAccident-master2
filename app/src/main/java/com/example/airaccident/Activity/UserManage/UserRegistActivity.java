@@ -21,7 +21,7 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import okhttp3.Call;
 
-import static com.example.airaccident.AppConfigure.Url.userRegister;
+import static com.example.airaccident.AppConfigure.network.Url.userRegister;
 
 public class UserRegistActivity extends AppCompatActivity {
     EditText acount,password,again;

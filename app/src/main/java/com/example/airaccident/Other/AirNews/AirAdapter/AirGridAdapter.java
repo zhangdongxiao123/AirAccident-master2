@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo.AirGrid;
+package com.example.airaccident.Other.AirNews.AirAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.airaccident.R;
-import com.example.airaccident.Other.PicInfo.Bean.AirBean;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirBean;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo.AirGrid;
+package com.example.airaccident.Other.AirNews.AirActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.airaccident.Other.PicInfo.AirDescActivity;
+import com.example.airaccident.Other.AirNews.AirAdapter.AirGridAdapter;
 import com.example.airaccident.R;
-import com.example.airaccident.Other.PicInfo.Bean.AirBean;
-import com.example.airaccident.Other.PicInfo.Bean.AirUtils;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirBean;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirUtils;
 
 import java.util.List;
 

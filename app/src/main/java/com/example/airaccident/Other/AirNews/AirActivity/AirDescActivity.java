@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo;
+package com.example.airaccident.Other.AirNews.AirActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.airaccident.Other.PicInfo.Bean.AirBean;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirBean;
 import com.example.airaccident.R;
 
 public class AirDescActivity extends AppCompatActivity {

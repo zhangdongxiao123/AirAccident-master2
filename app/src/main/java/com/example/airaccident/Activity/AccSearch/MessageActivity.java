@@ -16,7 +16,7 @@ import com.example.airaccident.bean.DetailBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import static com.example.airaccident.AppConfigure.Url.airdetailDetail;
+import static com.example.airaccident.AppConfigure.network.Url.airdetailDetail;
 
 public class MessageActivity extends AppCompatActivity implements View.OnClickListener {
     TextView airid,airname,airtype,airwhen,airwhere,airwhy,airhow;

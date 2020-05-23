@@ -1,4 +1,4 @@
-package com.example.airaccident.AppConfigure;
+package com.example.airaccident.AppConfigure.network;
 
 /**
  * 存放所有的Api

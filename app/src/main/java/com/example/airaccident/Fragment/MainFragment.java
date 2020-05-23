@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.airaccident.Other.PicInfo.AirGrid.AirGridActivity;
-import com.example.airaccident.Other.PicInfo.AirList.InfoListActivity;
+import com.example.airaccident.Other.AirNews.AirActivity.AirGridActivity;
+import com.example.airaccident.Other.AirNews.AirActivity.AirListActivity;
 import com.example.airaccident.Other.Information.InfoFiveActivity;
 import com.example.airaccident.Other.Information.InfoFourActivity;
 import com.example.airaccident.Other.Information.InfoOneActivity;
@@ -22,7 +22,7 @@ import com.example.airaccident.Other.Information.InfoTwoActivity;
 import com.example.airaccident.Other.LaoHuangLi.TodayActivity;
 import com.example.airaccident.R;
 import com.example.airaccident.Other.Weather.WeatherActivity;
-import com.example.airaccident.Other.Writeagain.FocusTextView;
+import com.example.airaccident.AppConfigure.Writeagain.FocusTextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -86,7 +86,7 @@ public class MainFragment extends Fragment {
                     getActivity().startActivity(intent5);
                     break;
                 case R.id.fra_main_btn1:
-                    Intent intent6=new Intent(getActivity(), InfoListActivity.class);
+                    Intent intent6=new Intent(getActivity(), AirListActivity.class);
                     getActivity().startActivity(intent6);
                     break;
                 case R.id.fra_main_btn2:

@@ -15,7 +15,7 @@ import com.example.airaccident.R;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
-import static com.example.airaccident.AppConfigure.Url.reasonadd;
+import static com.example.airaccident.AppConfigure.network.Url.reasonadd;
 
 public class ReasonAddActivity extends AppCompatActivity {
     EditText manadd_airname,manadd_airhow;

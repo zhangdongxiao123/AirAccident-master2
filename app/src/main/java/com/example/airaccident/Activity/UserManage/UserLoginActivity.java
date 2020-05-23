@@ -24,7 +24,7 @@ import com.zhy.http.okhttp.callback.StringCallback;
 
 import okhttp3.Call;
 
-import static com.example.airaccident.AppConfigure.Url.userLogin;
+import static com.example.airaccident.AppConfigure.network.Url.userLogin;
 
 public class UserLoginActivity extends AppCompatActivity {
     EditText etAcount,etPassword;

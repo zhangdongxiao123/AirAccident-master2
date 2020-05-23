@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo.AirList;
+package com.example.airaccident.Other.AirNews.AirActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,15 +12,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.airaccident.Other.PicInfo.AirDescActivity;
+import com.example.airaccident.Other.AirNews.AirAdapter.AirListAdapter;
 import com.example.airaccident.R;
-import com.example.airaccident.Other.PicInfo.Bean.AirBean;
-import com.example.airaccident.Other.PicInfo.Bean.AirUtils;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirBean;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InfoListActivity extends AppCompatActivity implements View.OnClickListener {
+public class AirListActivity extends AppCompatActivity implements View.OnClickListener {
     EditText searchEt;
     ImageView searchIv,flushIv;
     ListView showLv;
@@ -28,7 +28,7 @@ public class InfoListActivity extends AppCompatActivity implements View.OnClickL
     List<AirBean> mDatas;
     //获取全部数据
     List<AirBean> allAirList;
-    private InfoListAdapter adapter;
+    private AirListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,7 @@ public class InfoListActivity extends AppCompatActivity implements View.OnClickL
             //将全部信息添加到指定数据源mDatas中
         mDatas.addAll(allAirList);
         //创建适配器 BaseAdapter的子类
-        adapter=new InfoListAdapter(this,mDatas);
+        adapter=new AirListAdapter(this,mDatas);
         //设置适配器
         showLv.setAdapter(adapter);
         //设置ListView的单向点击监听功能
@@ -56,7 +56,7 @@ public class InfoListActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 AirBean airBean=mDatas.get(position);
-                Intent intent=new Intent(InfoListActivity.this, AirDescActivity.class);
+                Intent intent=new Intent(AirListActivity.this, AirDescActivity.class);
                 intent.putExtra("air",airBean);
                 startActivity(intent);
             }

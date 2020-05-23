@@ -19,7 +19,7 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.airaccident.AppConfigure.Url.airwhyselect;
+import static com.example.airaccident.AppConfigure.network.Url.airwhyselect;
 
 public class ReasonSecondActivity extends AppCompatActivity {
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Other.PicInfo.AirDescActivity">
+    tools:context=".Other.AirNews.AirActivity.AirDescActivity">
 
     <LinearLayout
         android:id="@+id/airdesc_layout"

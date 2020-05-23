@@ -33,10 +33,10 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.util.EnumSet;
 import java.util.LinkedHashMap;
 
-import static com.example.airaccident.AppConfigure.Url.airdetailDetail;
-import static com.example.airaccident.AppConfigure.Url.delete;
-import static com.example.airaccident.AppConfigure.Url.update;
-import static com.example.airaccident.AppConfigure.Url.upload;
+import static com.example.airaccident.AppConfigure.network.Url.airdetailDetail;
+import static com.example.airaccident.AppConfigure.network.Url.delete;
+import static com.example.airaccident.AppConfigure.network.Url.update;
+import static com.example.airaccident.AppConfigure.network.Url.upload;
 import static com.zhihu.matisse.MimeType.JPEG;
 import static com.zhihu.matisse.MimeType.PNG;
 

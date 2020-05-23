@@ -1,4 +1,4 @@
-package com.example.airaccident.Other.PicInfo.AirList;
+package com.example.airaccident.Other.AirNews.AirAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,16 +9,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.airaccident.R;
-import com.example.airaccident.Other.PicInfo.Bean.AirBean;
+import com.example.airaccident.Other.AirNews.AirConfigure.AirBean;
 
 import java.util.List;
 
-public class InfoListAdapter extends BaseAdapter {
+public class AirListAdapter extends BaseAdapter {
     //将数据源和ListView所在的页面传入进来
     Context context;//context是activity的父类，可以把父类的引用引向子类的对象activity
     List<AirBean> mDatas;
 
-    public InfoListAdapter(Context context, List<AirBean> mDatas) {
+    public AirListAdapter(Context context, List<AirBean> mDatas) {
         this.context = context;
         this.mDatas = mDatas;
     }

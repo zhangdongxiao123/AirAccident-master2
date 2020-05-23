@@ -44,9 +44,9 @@
         <activity android:name=".Other.Weather.WeatherActivity" />
         <activity android:name=".Activity.UserManage.UserPasswordActivity" />
         <activity android:name=".Activity.UserManage.UserRegistActivity" />
-        <activity android:name=".Other.PicInfo.AirDescActivity" />
-        <activity android:name=".Other.PicInfo.AirGrid.AirGridActivity" />
-        <activity android:name=".Other.PicInfo.AirList.InfoListActivity" />
+        <activity android:name=".Other.AirNews.AirActivity.AirDescActivity" />
+        <activity android:name=".Other.AirNews.AirActivity.AirGridActivity" />
+        <activity android:name=".Other.AirNews.AirActivity.AirListActivity" />
         <activity android:name=".Other.Information.InfoFiveActivity" />
         <activity android:name=".Activity.UserManage.UserLoginActivity" />
         <activity android:name=".Other.Information.InfoFourActivity" />

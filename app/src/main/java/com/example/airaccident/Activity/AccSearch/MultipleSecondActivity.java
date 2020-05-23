@@ -20,7 +20,7 @@ import com.zhy.http.okhttp.callback.StringCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.airaccident.AppConfigure.Url.allselect;
+import static com.example.airaccident.AppConfigure.network.Url.allselect;
 
 public class MultipleSecondActivity extends AppCompatActivity implements View.OnClickListener {
 //    ImageView fanhui;
