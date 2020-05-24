@@ -34,9 +34,9 @@ public class GuideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
-        initData();
         mBtnStart = (Button) findViewById(R.id.btn_start);
         mVpGuide =(ViewPager)findViewById(R.id.viewPager);
+        initData();
         MyPagerAdapter adapter = new MyPagerAdapter();
         mVpGuide.setAdapter(adapter);
         mVpGuide.setOnPageChangeListener(new MyListener());
@@ -66,12 +66,20 @@ public class GuideActivity extends AppCompatActivity {
 
         @Override
         public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-            return view == object;//官方推荐的一个写法
+            //这个函数就是用来告诉框架，这个view的id是不是这个object。
+            //谷歌官方推荐把view当id用，所以常规的instantiateItem（）函数的返回值是你自己定义的view
+            // 而isViewFromObject（）的返回值是view == object。
+            return view == object;
         }
 
         @NonNull
         @Override
         public Object instantiateItem(@NonNull ViewGroup container, int position) {
+            //ViewPager里面对每个页面的管理是key-value形式的，
+            // 也就是说每个page都有个对应的id（id是object类型），需要对page操作的时候都是通过id来完成的
+            //这是pageAdapter里的函数，功能就是往PageView里添加自己需要的page。
+            // 同时注意它还有个返回值object，这就是那个id。
+            //歌官方推荐把view当id用，所以常规的instantiateItem（）函数的返回值是你自己定义的view
             View view=mViewList.get(position);
             container.addView(view);
             return view;//每一次子页的显示界面
