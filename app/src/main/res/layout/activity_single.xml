@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:padding="10dp"
-        android:background="@mipmap/beijing1">
+        android:background="#F19205">
         <ImageView
             android:id="@+id/single_shuaxin"
             android:src="@mipmap/clean_btn"
@@ -39,9 +39,15 @@
             android:textColor="@color/white"
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:hint="输入摘要长度小于12">
         </EditText>
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/single_liebiao"

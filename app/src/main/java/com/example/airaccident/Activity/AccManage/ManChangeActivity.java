@@ -144,14 +144,19 @@ public class ManChangeActivity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.manChange_xiugai:
 
-                if (edid.getText().toString().equals(""))
-                {
-                    Toast.makeText(this, "请输入id", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+//                if (edid.getText().toString().equals(""))
+//                {
+//                    Toast.makeText(this, "请输入id", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
                 if (name.getText().toString().equals(""))
                 {
                     Toast.makeText(this, "请输入事故名称", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (name.getText().toString().trim().length()>30)
+                {
+                    Toast.makeText(this, "事故名称长度不能大于30", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (type.getText().toString().equals(""))
@@ -159,9 +164,19 @@ public class ManChangeActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(this, "请输入事故类型", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (type.getText().toString().trim().length()>5)
+                {
+                    Toast.makeText(this, "事故类型长度不能大于5", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (when.getText().toString().equals(""))
                 {
                     Toast.makeText(this, "请输入事故时间", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (when.getText().toString().trim().length()>11)
+                {
+                    Toast.makeText(this, "事故时间长度不能大于11", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (where.getText().toString().equals(""))
@@ -169,10 +184,19 @@ public class ManChangeActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(this, "请输入地点", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
+                if (where.getText().toString().trim().length()>5)
+                {
+                    Toast.makeText(this, "地点长度不能大于5", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if (why.getText().toString().equals(""))
                 {
                     Toast.makeText(this, "请输入事故原因", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (why.getText().toString().trim().length()>10)
+                {
+                    Toast.makeText(this, "事故原因长度不能大于10", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (how.getText().toString().equals(""))

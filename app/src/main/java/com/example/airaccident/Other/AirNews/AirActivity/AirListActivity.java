@@ -89,7 +89,13 @@ public class AirListActivity extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(this,"输入内容不能为空！", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //2、判断所有的事件列表的标题是否包含输入的内容，如果包含，就添加到小的list集合里
+                //2、判断输入的信息长度是否大于10
+                String msg1=searchEt.getText().toString().trim();
+                if(msg1.length()>10){
+                    Toast.makeText(this,"输入内容长度不能大于10！", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //3、判断所有的事件列表的标题是否包含输入的内容，如果包含，就添加到小的list集合里
                 List<AirBean> list = new ArrayList<>();
                 for (int i = 0; i < allAirList.size(); i++){
                     String title =allAirList.get(i).getTitle();

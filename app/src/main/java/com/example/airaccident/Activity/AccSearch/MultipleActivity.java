@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.airaccident.R;
 
@@ -39,31 +40,31 @@ public class MultipleActivity extends AppCompatActivity implements View.OnClickL
                 String airwhen = when.getText().toString().trim();
                 String airwhere = where.getText().toString().trim();
                 String airwhy = why.getText().toString().trim();
-//                if (airname.equals(""))
-//                {
-//                    Toast.makeText(this, "请输入事故名称", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//                if (airtype.equals(""))
-//                {
-//                    Toast.makeText(this, "请输入事故类型", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//                if (airwhen.equals(""))
-//                {
-//                    Toast.makeText(this, "请输入事故时间", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//                if (airwhere.equals(""))
-//                {
-//                    Toast.makeText(this, "请输入事故地点", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//                if (airwhy.equals(""))
-//                {
-//                    Toast.makeText(this, "请输入事故原因", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
+                if (airname.length()>30)
+                {
+                    Toast.makeText(this, "事故名称长度不能大于30", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (airtype.length()>5)
+                {
+                    Toast.makeText(this, "事故类型长度不能大于5", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (airwhen.length()>11)
+                {
+                    Toast.makeText(this, "事故时间长度不能大于11", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (airwhere.length()>5)
+                {
+                    Toast.makeText(this, "事故地点长度不能大于5", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (airwhy.length()>10)
+                {
+                    Toast.makeText(this, "事故原因长度不能大于10", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Intent intent =new Intent(this, MultipleSecondActivity.class);
                 intent.putExtra("airname",airname);
                 intent.putExtra("airtype",airtype);

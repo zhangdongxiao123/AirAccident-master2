@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:padding="10dp"
-        android:background="@mipmap/beijing1">
+        android:background="#f19205">
         <ImageView
-            android:id="@+id/single_shuaxin"
+            android:id="@+id/reason_shuaxin"
             android:src="@mipmap/clean_btn"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -22,9 +22,9 @@
             android:layout_height="40dp">
         </ImageView>
         <ImageView
-            android:id="@+id/single_sousuo"
+            android:id="@+id/reason_sousuo"
             android:src="@mipmap/info_iv_search"
-            android:layout_toLeftOf="@id/single_shuaxin"
+            android:layout_toLeftOf="@id/reason_shuaxin"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -32,16 +32,22 @@
             android:layout_height="40dp">
         </ImageView>
         <EditText
-            android:id="@+id/single_shuru"
-            android:layout_toLeftOf="@id/single_sousuo"
+            android:id="@+id/reason_shuru"
+            android:layout_toLeftOf="@id/reason_sousuo"
             android:paddingLeft="20dp"
             android:background="@drawable/info_et_bg"
             android:textColor="@color/white"
             android:layout_centerVertical="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:hint="输入摘要长度小于12">
         </EditText>
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

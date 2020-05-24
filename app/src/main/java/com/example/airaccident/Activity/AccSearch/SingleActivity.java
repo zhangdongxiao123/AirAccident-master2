@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import okhttp3.Call;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -115,6 +116,12 @@ public class SingleActivity extends AppCompatActivity implements View.OnClickLis
                 if (keyword.equals(""))
                 {
                     Toast.makeText(this, "请输入关键词", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                //摘要长度不能大于10
+                String msg1=shuru.getText().toString().trim();
+                if(msg1.length()>12){
+                    Toast.makeText(this,"输入内容长度不能大于12！", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //搜索请求事件

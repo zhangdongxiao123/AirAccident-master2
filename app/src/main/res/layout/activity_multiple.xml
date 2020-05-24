@@ -9,90 +9,122 @@
     tools:context=".Activity.AccSearch.MultipleActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#FAF1A4">
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#F19205">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="多条件查询页面"
-            android:textSize="30dp"
+            android:text="多 条 件 查 询 页 面"
+            android:textSize="20dp"
             android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
             android:layout_centerInParent="true">
         </TextView>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#071771">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
-    <TextView
-        android:paddingTop="5dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="事故名称：">
-    </TextView>
-    <EditText
-
-        android:paddingTop="5dp"
-        android:id="@+id/multiple_name"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    <TextView
-        android:paddingTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="事故类型：">
-    </TextView>
-    <EditText
-        android:paddingTop="5dp"
-        android:id="@+id/multiple_type"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    <TextView
-        android:paddingTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="事故时间：">
-    </TextView>
-    <EditText
-        android:paddingTop="5dp"
-        android:id="@+id/multiple_when"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    <TextView
-        android:paddingTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="事故地点：">
-    </TextView>
-    <EditText
-        android:paddingTop="5dp"
-        android:id="@+id/multiple_where"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    <TextView
-        android:paddingTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:text="事故原因：">
-    </TextView>
-    <EditText
-        android:paddingTop="5dp"
-        android:id="@+id/multiple_why"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-    </EditText>
-    <Button
-        android:id="@+id/multiple_duocha"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:paddingTop="10dp"
-        android:text="多条件查询">
-    </Button>
-
-
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="事故名称："
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_name"
+                android:layout_width="match_parent"
+                android:hint="北欧地区航空E190图尔库附近座舱烟味"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="事故类型："
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_type"
+                android:layout_width="match_parent"
+                android:hint="不安全事件"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="事故时间："
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_when"
+                android:layout_width="match_parent"
+                android:hint="2017年12月3日"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="事故地点："
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_where"
+                android:layout_width="match_parent"
+                android:hint="北欧"
+                android:layout_height="wrap_content">
+            </EditText>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="事故原因："
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </TextView>
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_why"
+                android:layout_width="match_parent"
+                android:hint="航空器动力装置故障"
+                android:layout_height="wrap_content">
+            </EditText>
+            <Button
+                android:layout_marginTop="5dp"
+                android:id="@+id/multiple_duocha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_style"
+                android:text="多条件查询"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -10,70 +10,74 @@
     tools:context=".Activity.AccSearch.TypeActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#FAF1A4">
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#f19205">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="事件类型"
+            android:text="事 件 类 型"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
             android:textStyle="bold"
-            android:textSize="25dp"
+            android:layout_centerVertical="true"
             android:layout_centerInParent="true">
         </TextView>
     </RelativeLayout>
-    <View
-        android:background="#333"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
     <LinearLayout
-        android:background="#FAF1A4"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f19205">
 
         <TextView
             android:id="@+id/tv_1"
             android:textSize="15sp"
-            android:textColor="#333"
+            android:textColor="#ffffff"
             android:gravity="center"
             android:text="隐患"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
-            android:background="#333"
-            android:layout_width="1dp"
+            android:background="#024942"
+            android:layout_width="2dp"
             android:layout_height="50dp"/>
         <TextView
             android:id="@+id/tv_2"
             android:textSize="15sp"
-            android:textColor="#333"
+            android:textColor="#ffffff"
             android:gravity="center"
             android:text="不安全事件"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
-            android:background="#333"
-            android:layout_width="1dp"
+            android:background="#024942"
+            android:layout_width="2dp"
             android:layout_height="50dp"/>
         <TextView
             android:id="@+id/tv_3"
             android:textSize="15sp"
-            android:textColor="#333"
+            android:textColor="#ffffff"
             android:gravity="center"
             android:text="一般事故"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"/>
         <View
-            android:background="#333"
-            android:layout_width="1dp"
+            android:background="#024942"
+            android:layout_width="2dp"
             android:layout_height="50dp"/>
         <TextView
             android:id="@+id/tv_4"
             android:textSize="15sp"
-            android:textColor="#333"
+            android:textColor="#ffffff"
             android:gravity="center"
             android:text="重大事故"
             android:layout_weight="1"
@@ -83,8 +87,8 @@
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#071771">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
 
     <TextView
@@ -95,7 +99,7 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:textSize="14sp"
-        android:textColor="#000000"
+        android:textColor="#474849"
         android:text="不安全事件:没有人员伤亡，飞机有一点点损坏或没有损坏，没有造成严重后果或无明显后果、不易被发现的事件或违章行为如过不及时制止或做出改变可能会造成严重后果。"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -107,7 +111,7 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:textSize="14sp"
-        android:textColor="#000000"
+        android:textColor="#474849"
         android:text="重大事故:人员伤亡惨重，飞机严重损毁。"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

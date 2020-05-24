@@ -9,22 +9,24 @@
     tools:context=".Activity.AccManage.ManAddActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#faf1a4">
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#f19205">
         <TextView
-            android:id="@+id/manadd_bigTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添加事故原因界面"
-            android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textStyle="bold">
+            android:text="增 加 事 故 原 因"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
         </TextView>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#0C2197">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
     <ScrollView
         android:layout_width="match_parent"
@@ -34,25 +36,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:text="原因名称："
+                android:textColor="#000000">
+            </TextView>
 
-            <!--            <TextView-->
-
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:textSize="18sp"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:layout_margin="10dp"-->
-            <!--                android:text="事故id:">-->
-            <!--            </TextView>-->
-            <!--            <EditText-->
-            <!--                android:id="@+id/manadd_airid"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:textSize="18sp"-->
-            <!--                android:textStyle="bold"-->
-            <!--                android:layout_margin="10dp"-->
-            <!--                android:text="123">-->
-            <!--            </EditText>-->
+            <EditText
+                android:id="@+id/reason_airname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:hint="其他部门工作人员原因">
+            </EditText>
 
             <TextView
                 android:layout_width="match_parent"
@@ -60,47 +62,30 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故名称：">
+                android:text="原因详情："
+                android:textColor="#000000">
             </TextView>
+
             <EditText
-                android:id="@+id/manadd_airname"
+                android:id="@+id/reason_airhow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="请填写事故名称">
+                android:hint="安检失误、检查失误（检查装载货物之类的）、部门之间沟通 合作存在问题、部门制定的有关条例不清晰等，装载分布差错未被发现，因为在事故航班执行前，未按照批准的程序进行重量和平衡计算">
             </EditText>
 
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:text="事故详情：">
-            </TextView>
-            <EditText
-                android:id="@+id/manadd_airhow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_margin="10dp"
-                android:hint="请填写事故详情">
-            </EditText>
             <Button
-                android:id="@+id/manadd_tianjia"
+                android:id="@+id/reason_tianjia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
                 android:text="添加原因"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/layout_style">
             </Button>
         </LinearLayout>
     </ScrollView>

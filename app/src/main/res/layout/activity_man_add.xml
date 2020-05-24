@@ -9,22 +9,24 @@
     tools:context=".Activity.AccManage.ManAddActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#faf1a4">
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#f19205">
         <TextView
-            android:id="@+id/manadd_bigTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添加事故信息界面"
-            android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textStyle="bold">
+            android:text="添 加 事 故"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
         </TextView>
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#0C2197">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
     <ScrollView
         android:layout_width="match_parent"
@@ -41,33 +43,14 @@
                 android:layout_margin="10dp"
                 android:src="@mipmap/moren">
             </ImageView>
-
-<!--            <TextView-->
-
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:textSize="18sp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="事故id:">-->
-<!--            </TextView>-->
-<!--            <EditText-->
-<!--                android:id="@+id/manadd_airid"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:textSize="18sp"-->
-<!--                android:textStyle="bold"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:text="123">-->
-<!--            </EditText>-->
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故名称：">
+                android:text="事故名称："
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airname"
@@ -76,7 +59,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="XX事故">
+                android:hint="北欧地区航空E190图尔库附近座舱烟味">
             </EditText>
 
             <TextView
@@ -85,7 +68,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故类型：">
+                android:text="事故类型："
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airtype"
@@ -94,7 +78,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="一般事故">
+                android:hint="不安全事件">
             </EditText>
 
             <TextView
@@ -103,7 +87,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故时间：">
+                android:text="事故时间："
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airwhen"
@@ -112,7 +97,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="2019年10月10日">
+                android:hint="2017年12月3日">
             </EditText>
 
             <TextView
@@ -121,7 +106,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故地点：">
+                android:text="事故地点："
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airwhere"
@@ -130,7 +116,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="东京">
+                android:hint="北欧">
             </EditText>
 
             <TextView
@@ -139,7 +125,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故原因:">
+                android:text="事故原因:"
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airwhy"
@@ -148,7 +135,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="机组原因">
+                android:hint="航空器动力装置故障">
             </EditText>
 
             <TextView
@@ -157,7 +144,8 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故详情：">
+                android:text="事故详情："
+                android:textColor="#000000">
             </TextView>
             <EditText
                 android:id="@+id/manadd_airhow"
@@ -166,7 +154,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="某时某地因何发生航空安全事故">
+                android:hint="2017年12月3日，一架北欧地区航空公司ERJ-190型客机（芬兰注册号OH-LKE），代表芬兰航空公司执行AY-865航班，从芬兰赫尔辛基飞往瑞典哥德堡，机上载有100名乘客和4名机组人员。飞机从赫尔辛基机场起飞爬升，在图尔库以南大约30海里处爬升至大约FL310高度层时，机组报告机舱内有烟味，并改航图尔库。15分钟后，飞机在图尔库机场的26号跑道上安全降落。机组通过滑梯实施了紧急撤离，事件中没有人员受伤。应急服务部门未发现火、高温和烟雾的痕迹。">
             </EditText>
             <Button
                 android:id="@+id/manadd_tianjia"
@@ -175,8 +163,9 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="添加事故信息"
-                android:layout_marginBottom="30dp">
+                android:text="增加事故信息"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/layout_style">
             </Button>
         </LinearLayout>
     </ScrollView>

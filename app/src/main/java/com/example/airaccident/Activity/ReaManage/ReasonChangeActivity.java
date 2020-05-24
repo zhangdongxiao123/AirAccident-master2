@@ -36,11 +36,11 @@ public class ReasonChangeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_reason_detail);
-        manChange_shanchu= findViewById(R.id.manChange_shanchu);
-        manChange_xiugai = findViewById(R.id.manChange_xiugai);
-        manadd_airname = findViewById(R.id.manadd_airname);
-        manadd_airhow = findViewById(R.id.manadd_airhow);
-        manadd_id = findViewById(R.id.manadd_id);
+        manChange_shanchu= findViewById(R.id.reaChange_shanchu);
+        manChange_xiugai = findViewById(R.id.reaChange_xiugai);
+        manadd_airname = findViewById(R.id.reaAdd_airname);
+        manadd_airhow = findViewById(R.id.reaAdd_airhow);
+        manadd_id = findViewById(R.id.reaAdd_id);
         Intent intent = getIntent();
         reasonId = intent.getStringExtra("reasonId");
 
@@ -125,6 +125,11 @@ public class ReasonChangeActivity extends AppCompatActivity {
             if (manadd_airname.getText().toString().equals(""))
             {
                 Toast.makeText(this, "请填写事故原因", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (manadd_airname.getText().toString().trim().length()>10)
+            {
+                Toast.makeText(this, "事故原因长度不能大于10", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (manadd_airhow.getText().toString().equals(""))

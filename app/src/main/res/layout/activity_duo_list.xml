@@ -9,22 +9,15 @@
     tools:context=".Activity.AccSearch.MultipleSecondActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:padding="10dp"
-        android:background="#faf1a4">
-<!--        <ImageView-->
-<!--            android:id="@+id/duolist_fanhui"-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:src="@mipmap/icon_back"-->
-<!--            android:layout_alignParentLeft="true"-->
-<!--            android:layout_centerVertical="true">-->
-<!--        </ImageView>-->
+        android:background="#f19205">
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:text="事故列表"
-            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="事 故 列 表"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
             android:textStyle="bold"
             android:layout_centerVertical="true"
             android:layout_centerInParent="true">
@@ -32,8 +25,8 @@
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#071771">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
 
 

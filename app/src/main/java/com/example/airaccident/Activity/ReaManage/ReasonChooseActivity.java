@@ -43,9 +43,9 @@ public class ReasonChooseActivity extends AppCompatActivity implements View.OnCl
     private void initView() {
         list = new ArrayList<>();
         recyclerview = findViewById(R.id.recyclerview);
-        shuaxin=findViewById(R.id.single_shuaxin);//刷新
-        sousuo=findViewById(R.id.single_sousuo);//搜索
-        shuru=findViewById(R.id.single_shuru);//输入
+        shuaxin=findViewById(R.id.reason_shuaxin);//刷新
+        sousuo=findViewById(R.id.reason_sousuo);//搜索
+        shuru=findViewById(R.id.reason_shuru);//输入
         liebiao=findViewById(R.id.recyclerview);//列表
         //初始化适配器
         list = new ArrayList<>();
@@ -108,7 +108,7 @@ public class ReasonChooseActivity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()) {
             //点击刷新，清空输入框中的内容，刷新界面
-            case R.id.single_shuaxin:
+            case R.id.reason_shuaxin:
                 shuru.setText("");
                 getok("");
 
@@ -116,11 +116,16 @@ public class ReasonChooseActivity extends AppCompatActivity implements View.OnCl
 //                singleAdapter.notifyDataSetChanged();
                 break;
             //点击搜索
-            case R.id.single_sousuo:
+            case R.id.reason_sousuo:
                 String keyword = shuru.getText().toString();
                 if (keyword.equals(""))
                 {
                     Toast.makeText(this, "请输入关键词", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (keyword.length()>12)
+                {
+                    Toast.makeText(this, "关键词长度不能大于12", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 //搜索请求事件

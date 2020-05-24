@@ -9,17 +9,25 @@
     tools:context=".Activity.AccSearch.ReasonSecondActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#FAF1A4">
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:background="#f19205">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="原因分类详情页面"
+            android:text="事 故 列 表"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
             android:textStyle="bold"
-            android:textSize="25sp"
+            android:layout_centerVertical="true"
             android:layout_centerInParent="true">
         </TextView>
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy"

@@ -104,6 +104,11 @@ public class ManChooseActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(this, "请输入关键词", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                if (keyword.length()>12)
+                {
+                    Toast.makeText(this, "关键词长度不能大于12", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 //搜索请求事件
                 getok(keyword);
                 break;

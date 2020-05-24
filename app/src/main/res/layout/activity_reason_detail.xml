@@ -9,10 +9,10 @@
     tools:context=".Activity.AccManage.ManChangeActivity">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#faf1a4">
+        android:layout_height="50dp"
+        android:background="#f19205">
         <ImageView
-            android:id="@+id/manChange_xiugai"
+            android:id="@+id/reaChange_xiugai"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@mipmap/icon_write"
@@ -20,16 +20,18 @@
             android:layout_marginLeft="10dp">
         </ImageView>
         <TextView
-            android:id="@+id/manChange_bigTitle"
+            android:id="@+id/reaChange_bigTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="修改/删除事故原因界面"
-            android:layout_centerInParent="true"
-            android:textSize="18sp"
-            android:textStyle="bold">
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true">
         </TextView>
         <ImageView
-            android:id="@+id/manChange_shanchu"
+            android:id="@+id/reaChange_shanchu"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@mipmap/icon_laji"
@@ -37,13 +39,13 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp">
         </ImageView>
-
     </RelativeLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#0C2197">
+        android:layout_height="3dp"
+        android:background="#024942">
     </TextView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -61,7 +63,7 @@
                 android:text="事故ID：">
             </TextView>
             <TextView
-                android:id="@+id/manadd_id"
+                android:id="@+id/reaAdd_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -76,20 +78,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故名称：">
+                android:text="原因名称：">
             </TextView>
             <EditText
-                android:id="@+id/manadd_airname"
+                android:id="@+id/reaAdd_airname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="请填写事故名称">
+                android:hint="其他部门工作人员原因">
             </EditText>
-
-
-
 
             <TextView
                 android:layout_width="match_parent"
@@ -97,17 +96,18 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="事故详情：">
+                android:text="原因详情：">
             </TextView>
             <EditText
-                android:id="@+id/manadd_airhow"
+                android:id="@+id/reaAdd_airhow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:hint="请填写事故详情">
+                android:hint="安检失误、检查失误">
             </EditText>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
