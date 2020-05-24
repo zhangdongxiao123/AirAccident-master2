@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="添 加 事 故"
+            android:text="增 加 事 故 信 息 界 面"
             android:textSize="20dp"
             android:textColor="#ffffff"
             android:textStyle="bold"

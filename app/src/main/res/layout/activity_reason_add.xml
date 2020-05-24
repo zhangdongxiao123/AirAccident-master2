@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="增 加 事 故 原 因"
+            android:text="增 加 事 故 原 因 界 面"
             android:textSize="20dp"
             android:textColor="#ffffff"
             android:textStyle="bold"
@@ -83,7 +83,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
-                android:text="添加原因"
+                android:text="增加事故原因"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/layout_style">
             </Button>
