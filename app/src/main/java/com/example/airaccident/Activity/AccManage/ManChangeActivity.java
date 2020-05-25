@@ -24,7 +24,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.example.airaccident.R;
 import com.example.airaccident.AppConfigure.glide.GlideEngineEx;
-import com.example.airaccident.bean.DetailBean;
+import com.example.airaccident.Bean.DetailBean;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 import com.zhy.http.okhttp.OkHttpUtils;

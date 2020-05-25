@@ -11,7 +11,7 @@ import android.util.Log;
 import com.alibaba.fastjson.JSON;
 import com.example.airaccident.Adapter.ReasonAdapter;
 import com.example.airaccident.R;
-import com.example.airaccident.bean.ReasonBean;
+import com.example.airaccident.Bean.ReasonBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

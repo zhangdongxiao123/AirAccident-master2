@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.airaccident.R;
-import com.example.airaccident.bean.ReasonDetailBean;
+import com.example.airaccident.Bean.ReasonDetailBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

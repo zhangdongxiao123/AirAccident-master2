@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.bumptech.glide.Glide;
 import com.example.airaccident.R;
-import com.example.airaccident.bean.DetailBean;
+import com.example.airaccident.Bean.DetailBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

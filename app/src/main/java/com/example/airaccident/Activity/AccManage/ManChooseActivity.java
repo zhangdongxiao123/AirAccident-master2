@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.example.airaccident.Adapter.ManChooseAdapter;
 import com.example.airaccident.R;
-import com.example.airaccident.bean.SingleBean;
+import com.example.airaccident.Bean.SingleBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

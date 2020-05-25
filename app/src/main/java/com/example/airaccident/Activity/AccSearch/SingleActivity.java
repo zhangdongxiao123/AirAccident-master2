@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import okhttp3.Call;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -16,7 +15,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.example.airaccident.Adapter.SingleAdapter;
 import com.example.airaccident.R;
-import com.example.airaccident.bean.SingleBean;
+import com.example.airaccident.Bean.SingleBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

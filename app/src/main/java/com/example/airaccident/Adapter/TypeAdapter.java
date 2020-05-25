@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.airaccident.R;
 import com.example.airaccident.Activity.AccSearch.MessageActivity;
-import com.example.airaccident.bean.SingleBean;
+import com.example.airaccident.Bean.SingleBean;
 
 import java.util.List;
 

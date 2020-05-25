@@ -1,4 +1,4 @@
-package com.example.airaccident.bean;
+package com.example.airaccident.Bean;
 
 import java.util.List;
 

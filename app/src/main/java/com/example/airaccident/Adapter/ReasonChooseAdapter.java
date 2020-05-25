@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.airaccident.R;
 import com.example.airaccident.Activity.ReaManage.ReasonChangeActivity;
-import com.example.airaccident.bean.ReasonListBean;
+import com.example.airaccident.Bean.ReasonListBean;
 
 import java.util.List;
 
