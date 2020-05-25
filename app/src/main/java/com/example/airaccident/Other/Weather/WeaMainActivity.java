@@ -3,6 +3,7 @@ package com.example.airaccident.Other.Weather;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -31,9 +32,10 @@ public class WeaMainActivity extends AppCompatActivity implements View.OnClickLi
     ImageView dayIv;
     TextView clothIndexTv,carIndexTv,coldIndexTv,sportIndexTv,raysIndexTv;
     LinearLayout futureLayout;
-    int count=0;
-
-    //获取的数据
+    int count=0;//判断是不是第一次加载未来三天的信息
+    private SharedPreferences preferences;//存储自己想要的天气信息
+    private SharedPreferences.Editor editor;
+    //获取的指数数据
     private List<weaBean.ResultsBean.IndexBean>indexList;
 
     @Override
@@ -67,11 +69,22 @@ public class WeaMainActivity extends AppCompatActivity implements View.OnClickLi
         coldIndexTv.setOnClickListener(this);//感冒指数
         sportIndexTv.setOnClickListener(this);//运动指数
         raysIndexTv.setOnClickListener(this);//紫外线指数
-        //三、请求数据
+        //存储地点信息
+        preferences=getSharedPreferences("weather",MODE_PRIVATE);
+        editor = preferences.edit();
+        //三、天气url
         String urla="http://api.map.baidu.com/telematics/v3/weather?location=";
-        String urlb="天津";
+        String urlb=preferences.getString("city","天津");
         String urlc="&output=json&ak=FkPhtMBK0HTIQNh7gG4cNUttSTyr0nzo";
+        //存储地点信息
+        preferences=getSharedPreferences("weather",MODE_PRIVATE);
+        editor = preferences.edit();
+        editor.putString("city",urlb);
+        editor.commit();
+        //请求天气信息
         loadWeatherData(urla,urlb,urlc);
+
+
     }
 
     private void loadWeatherData(String urla, String urlb,  String urlc) {
@@ -94,11 +107,14 @@ public class WeaMainActivity extends AppCompatActivity implements View.OnClickLi
                             if(error!=0){
                                 Toast.makeText(WeaMainActivity.this, "城市不存在", Toast.LENGTH_SHORT).show();
                                 String url1="http://api.map.baidu.com/telematics/v3/weather?location=";
-                                String url2="天津";
+                                String url2=preferences.getString("city","天津");
                                 String url3="&output=json&ak=FkPhtMBK0HTIQNh7gG4cNUttSTyr0nzo";
                                 loadWeatherData(url1,url2,url3);
                             }else {
                                 weaBean.ResultsBean resultsBean=weatherBean.getResults().get(0);
+                                //获取数据成功
+                                editor.putString("city",resultsBean.getCurrentCity());
+                                editor.commit();
                                 //获取指数信息集合列表
                                 indexList=resultsBean.getIndex();
                                 //设置TextView
