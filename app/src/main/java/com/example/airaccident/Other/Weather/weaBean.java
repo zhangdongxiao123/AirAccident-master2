@@ -1,14 +1,14 @@
-package com.example.airaccident.Other.Weather.WeaBean;
+package com.example.airaccident.Other.Weather;
 
 import java.util.List;
 
-public class WeatherBean {
+public class weaBean {
 
     /**
      * error : 0
      * status : success
-     * date : 2020-04-11
-     * results : [{"currentCity":"北京","pm25":"30","index":[{"des":"建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。","tipt":"穿衣指数","title":"穿衣","zs":"较舒适"},{"des":"适宜洗车，未来持续两天无雨天气较好，适合擦洗汽车，蓝天白云、风和日丽将伴您的车子连日洁净。","tipt":"洗车指数","title":"洗车","zs":"适宜"},{"des":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","tipt":"感冒指数","title":"感冒","zs":"少发"},{"des":"天气较好，但因风力稍强，户外可选择对风力要求不高的运动，推荐您进行室内运动。","tipt":"运动指数","title":"运动","zs":"较适宜"},{"des":"紫外线辐射极强，建议涂擦SPF20以上、PA++的防晒护肤品，尽量避免暴露于日光下。","tipt":"紫外线强度指数","title":"紫外线强度","zs":"很强"}],"weather_data":[{"date":"周六 04月11日 (实时：19℃)","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风3-4级","temperature":"22 ~ 10℃"},{"date":"周日","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风3-4级","temperature":"23 ~ 7℃"},{"date":"周一","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风微风","temperature":"25 ~ 10℃"},{"date":"周二","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/duoyun.png","weather":"多云","wind":"南风微风","temperature":"26 ~ 11℃"}]}]
+     * date : 2020-05-24
+     * results : [{"currentCity":"天津","pm25":"47","index":[{"des":"天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。","tipt":"穿衣指数","title":"穿衣","zs":"热"},{"des":"较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。","tipt":"洗车指数","title":"洗车","zs":"较适宜"},{"des":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","tipt":"感冒指数","title":"感冒","zs":"少发"},{"des":"天气较好，赶快投身大自然参与户外运动，尽情感受运动的快乐吧。","tipt":"运动指数","title":"运动","zs":"适宜"},{"des":"紫外线辐射极强，建议涂擦SPF20以上、PA++的防晒护肤品，尽量避免暴露于日光下。","tipt":"紫外线强度指数","title":"紫外线强度","zs":"很强"}],"weather_data":[{"date":"周日 05月24日 (实时：28℃)","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"多云转晴","wind":"北风3-4级","temperature":"28 ~ 17℃"},{"date":"周一","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/zhenyu.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/zhenyu.png","weather":"阵雨","wind":"东北风3-4级","temperature":"27 ~ 17℃"},{"date":"周二","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/duoyun.png","weather":"多云","wind":"西北风微风","temperature":"28 ~ 18℃"},{"date":"周三","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"西南风3-4级","temperature":"31 ~ 21℃"}]}]
      */
 
     private int error;
@@ -50,10 +50,10 @@ public class WeatherBean {
 
     public static class ResultsBean {
         /**
-         * currentCity : 北京
-         * pm25 : 30
-         * index : [{"des":"建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。","tipt":"穿衣指数","title":"穿衣","zs":"较舒适"},{"des":"适宜洗车，未来持续两天无雨天气较好，适合擦洗汽车，蓝天白云、风和日丽将伴您的车子连日洁净。","tipt":"洗车指数","title":"洗车","zs":"适宜"},{"des":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","tipt":"感冒指数","title":"感冒","zs":"少发"},{"des":"天气较好，但因风力稍强，户外可选择对风力要求不高的运动，推荐您进行室内运动。","tipt":"运动指数","title":"运动","zs":"较适宜"},{"des":"紫外线辐射极强，建议涂擦SPF20以上、PA++的防晒护肤品，尽量避免暴露于日光下。","tipt":"紫外线强度指数","title":"紫外线强度","zs":"很强"}]
-         * weather_data : [{"date":"周六 04月11日 (实时：19℃)","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风3-4级","temperature":"22 ~ 10℃"},{"date":"周日","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风3-4级","temperature":"23 ~ 7℃"},{"date":"周一","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"北风微风","temperature":"25 ~ 10℃"},{"date":"周二","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/duoyun.png","weather":"多云","wind":"南风微风","temperature":"26 ~ 11℃"}]
+         * currentCity : 天津
+         * pm25 : 47
+         * index : [{"des":"天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。","tipt":"穿衣指数","title":"穿衣","zs":"热"},{"des":"较适宜洗车，未来一天无雨，风力较小，擦洗一新的汽车至少能保持一天。","tipt":"洗车指数","title":"洗车","zs":"较适宜"},{"des":"各项气象条件适宜，无明显降温过程，发生感冒机率较低。","tipt":"感冒指数","title":"感冒","zs":"少发"},{"des":"天气较好，赶快投身大自然参与户外运动，尽情感受运动的快乐吧。","tipt":"运动指数","title":"运动","zs":"适宜"},{"des":"紫外线辐射极强，建议涂擦SPF20以上、PA++的防晒护肤品，尽量避免暴露于日光下。","tipt":"紫外线强度指数","title":"紫外线强度","zs":"很强"}]
+         * weather_data : [{"date":"周日 05月24日 (实时：28℃)","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"多云转晴","wind":"北风3-4级","temperature":"28 ~ 17℃"},{"date":"周一","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/zhenyu.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/zhenyu.png","weather":"阵雨","wind":"东北风3-4级","temperature":"27 ~ 17℃"},{"date":"周二","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/duoyun.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/duoyun.png","weather":"多云","wind":"西北风微风","temperature":"28 ~ 18℃"},{"date":"周三","dayPictureUrl":"http://api.map.baidu.com/images/weather/day/qing.png","nightPictureUrl":"http://api.map.baidu.com/images/weather/night/qing.png","weather":"晴","wind":"西南风3-4级","temperature":"31 ~ 21℃"}]
          */
 
         private String currentCity;
@@ -95,10 +95,10 @@ public class WeatherBean {
 
         public static class IndexBean {
             /**
-             * des : 建议着薄外套、开衫牛仔衫裤等服装。年老体弱者应适当添加衣物，宜着夹克衫、薄毛衣等。
+             * des : 天气热，建议着短裙、短裤、短薄外套、T恤等夏季服装。
              * tipt : 穿衣指数
              * title : 穿衣
-             * zs : 较舒适
+             * zs : 热
              */
 
             private String des;
@@ -141,12 +141,12 @@ public class WeatherBean {
 
         public static class WeatherDataBean {
             /**
-             * date : 周六 04月11日 (实时：19℃)
-             * dayPictureUrl : http://api.map.baidu.com/images/weather/day/qing.png
+             * date : 周日 05月24日 (实时：28℃)
+             * dayPictureUrl : http://api.map.baidu.com/images/weather/day/duoyun.png
              * nightPictureUrl : http://api.map.baidu.com/images/weather/night/qing.png
-             * weather : 晴
+             * weather : 多云转晴
              * wind : 北风3-4级
-             * temperature : 22 ~ 10℃
+             * temperature : 28 ~ 17℃
              */
 
             private String date;

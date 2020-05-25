@@ -48,7 +48,7 @@ public class TodayActivity extends AppCompatActivity implements View.OnClickList
         today_Ji=findViewById(R.id.today_Ji);
         //设置点击事件
         imgBtn=findViewById(R.id.today_imgbtn);
-        imgBtn.setOnClickListener((View.OnClickListener) this);
+        imgBtn.setOnClickListener(this);
 
         //获取日历对象
         calendar= Calendar.getInstance();
@@ -123,7 +123,6 @@ public class TodayActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if (v.getId()==R.id.today_imgbtn) {
             popCalendarDialog();
-            return;
         }
     }
 

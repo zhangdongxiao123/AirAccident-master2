@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.example.airaccident.Activity.FirstActivity.SplashActivity;
 import com.example.airaccident.Activity.ManManage.ManPasswordActivity;
 import com.example.airaccident.Activity.UserManage.UserLoginActivity;
+import com.example.airaccident.Activity.UserManage.UserPasswordActivity;
 import com.example.airaccident.R;
 import com.example.airaccident.Activity.ManManage.ManLoginActivity;
 
@@ -68,7 +69,7 @@ public class MineFragment extends Fragment {
         mine_mima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(), ManPasswordActivity.class);
+                Intent intent=new Intent(getActivity(), UserPasswordActivity.class);
                 getActivity().startActivity(intent);
             }
         });

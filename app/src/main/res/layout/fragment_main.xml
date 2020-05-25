@@ -10,9 +10,9 @@
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:background="@drawable/mian_top"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp"
+        android:background="@mipmap/background">
         <Button
             android:id="@+id/fra_main_btn1"
             android:layout_width="50dp"
@@ -20,7 +20,7 @@
             android:adjustViewBounds="true"
             android:gravity="center"
             android:text="列表新闻"
-            android:textColor="#3D7EB1"
+            android:textColor="#ffffff"
             android:textSize="16sp"
             android:background="@drawable/round_btn"
             android:layout_centerVertical="true"
@@ -34,7 +34,7 @@
         android:adjustViewBounds="true"
         android:gravity="center"
         android:text="图片新闻"
-        android:textColor="#3D7EB1"
+        android:textColor="#ffffff"
         android:textSize="16sp"
         android:background="@drawable/round_btn"
         android:layout_centerVertical="true"
@@ -48,7 +48,7 @@
             android:adjustViewBounds="true"
             android:gravity="center"
             android:text="天气查询"
-            android:textColor="#3D7EB1"
+            android:textColor="#ffffff"
             android:textSize="16sp"
             android:background="@drawable/round_btn"
             android:layout_centerVertical="true"
@@ -62,7 +62,7 @@
             android:adjustViewBounds="true"
             android:gravity="center"
             android:text="老黄历"
-            android:textColor="#3D7EB1"
+            android:textColor="#ffffff"
             android:textSize="16sp"
             android:background="@drawable/round_btn"
             android:layout_centerVertical="true"
@@ -70,6 +70,11 @@
             android:layout_marginRight="30dp">
         </Button>
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
     <TextView
         android:id="@+id/textView41"
         android:layout_width="match_parent"
@@ -204,7 +209,6 @@
         android:gravity="center"
         android:marqueeRepeatLimit="marquee_forever"
         android:singleLine="true"
-        android:layout_below="@id/tv"
         android:text="2016 年 11 月 18 日，一架拉脱维亚派美雅航空公司（Primera Air）波音
 737-800 型客机（注册号 YL-PSD），执行 PF-418 航班从西班牙兰萨罗特飞往丹麦
 比隆，机上载有 180 名乘客和 6 名机组人员。在到达爬升顶点后不久，两名飞行

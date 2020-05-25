@@ -10,18 +10,23 @@
     <RelativeLayout
         android:id="@+id/air_gride_layout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@mipmap/beijing1">
+        android:layout_height="50dp"
+        android:background="#F19205">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="航空安全事故"
-            android:textSize="20dp"
+            android:text="航 空 安 全 事 故"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#ffffff">
         </TextView>
     </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#024942">
+    </TextView>
     <GridView
         android:id="@+id/air_grid_gv"
         android:layout_width="match_parent"

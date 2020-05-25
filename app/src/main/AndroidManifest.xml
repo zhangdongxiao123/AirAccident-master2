@@ -3,7 +3,6 @@
     package="com.example.airaccident">
 
     <application
-        android:name=".Other.Weather.base_wea.UnitApp"
         android:allowBackup="true"
         android:icon="@mipmap/logo1"
         android:label="航空事故查询"
@@ -11,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Other.LaoHuangLi.TodayActivity"/>
+        <activity android:name=".Other.Weather.WeaMainActivity"></activity>
+        <activity android:name=".Other.LaoHuangLi.TodayActivity" />
         <activity android:name=".Activity.ReaManage.ReasonChangeActivity" />
         <activity android:name=".Activity.ReaManage.ReasonChooseActivity" />
         <activity android:name=".Activity.ReaManage.ReasonAddActivity" />
@@ -37,11 +37,6 @@
         <activity android:name=".Activity.AccSearch.MultipleSecondActivity" />
         <activity android:name=".Activity.AccSearch.MultipleActivity" />
         <activity android:name=".Activity.AccSearch.SingleActivity" />
-        <activity android:name=".Other.Weather.WmoreActivity" />
-        <activity android:name=".Other.Weather.city_manager.DeleteCityActivity" />
-        <activity android:name=".Other.Weather.city_manager.SearchCityActivity" />
-        <activity android:name=".Other.Weather.city_manager.CityManagerActivity" />
-        <activity android:name=".Other.Weather.WeatherActivity" />
         <activity android:name=".Activity.UserManage.UserPasswordActivity" />
         <activity android:name=".Activity.UserManage.UserRegistActivity" />
         <activity android:name=".Other.AirNews.AirActivity.AirDescActivity" />
