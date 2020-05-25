@@ -72,9 +72,12 @@ public class MoreFragment extends Fragment  {
         mSliderLayout.addSlider(textSliderView5);
 
         //mSliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        //设置底部动态标签
         mSliderLayout.setCustomIndicator(indicator);
+        //设置转场效果
         mSliderLayout.setCustomAnimation(new DescriptionAnimation());
         mSliderLayout.setPresetTransformer(SliderLayout.Transformer.RotateUp);
+        //设置停留时间
         mSliderLayout.setDuration(2000);
 
 
@@ -92,6 +95,14 @@ public class MoreFragment extends Fragment  {
             startActivity(Intent.createChooser(intent,"航空安全事故查询"));
         }
     }
+
+    //为防止旋转时发生内存泄漏，请确保在销毁活动或片段之前调用滑块上的stopAutoCycle（）：
+    @Override
+    public void onStop() {
+        mSliderLayout.stopAutoCycle();
+        super.onStop();
+    }
+
 }
 
 
